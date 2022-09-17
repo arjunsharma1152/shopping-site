@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 import { ReactComponent as Logo} from "../../assets/main-logo.svg";
 
-import './header-component.styles.scss';
+import './header.scss';
 
 const Header = () => (
     <div className="header">
-        <Link className="logo-comtainer" to="/">
+        <Link className="logo-container" to="/">
             <Logo className="logo" />
         </Link>
         <div className="options">

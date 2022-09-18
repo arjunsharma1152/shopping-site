@@ -1,25 +1,28 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-import { ReactComponent as Logo} from "../../assets/main-logo.svg";
+import { ReactComponent as Logo } from "../../assets/main-logo.svg";
 
-import './header-component.styles.scss';
+import "./header-component.styles.scss";
 
 const Header = () => (
-    <div className="header">
-        <Link className="logo-comtainer" to="/">
-            <Logo className="logo" />
-        </Link>
-        <div className="options">
-        <Link className='option' to='/shop'>
-            SHOP        
-        </Link>
-        <Link className='option' to='/shop'>
-            CONTACT        
-        </Link>
-        </div>
-        </div>
-)
+  <div className="header">
+    <NavLink className="logo-comtainer" to="/">
+      <Logo className="logo" />
+    </NavLink>
+    <div className="options">
+      <NavLink className="option" to="/shop">
+        SHOP
+      </NavLink>
+      <NavLink className="option" to="/shop">
+        CONTACT
+      </NavLink>
+      <NavLink className="option" to="/signin">
+        SIGN IN
+      </NavLink>
+    </div>
+  </div>
+);
 
 export default Header;

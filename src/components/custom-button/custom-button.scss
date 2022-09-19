@@ -20,5 +20,15 @@
       color: black;
       border: 1px solid black;
     }
+    
+    &.google-button{
+        background-color: #4885ed;
+        color: white;
+        
+        &:hover{
+            border: none;
+            background-color: #3985E4;
+        }
+    }
   }
   

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../../assets/main-logo.svg";
 
@@ -10,24 +10,24 @@ import "./header-component.styles.scss";
 
 const Header = ({ currentUser }) => (
   <div className="header">
-    <NavLink className="logo-comtainer" to="/">
+    <Link className="logo-comtainer" to="/">
       <Logo className="logo" />
-    </NavLink>
+    </Link>
     <div className="options">
-      <NavLink className="option" to="/shop">
+      <Link className="option" to="/shop">
         SHOP
-      </NavLink>
-      <NavLink className="option" to="/shop">
+      </Link>
+      <Link className="option" to="/contact">
         CONTACT
-      </NavLink>
+      </Link>
       {currentUser ? (
         <div className="option" onClick={() => auth.signOut()}>
           SIGN OUT
         </div>
       ) : (
-        <NavLink className="option" to="/signin">
+        <Link className="option" to="/signin">
           SIGN IN
-        </NavLink>
+        </Link>
       )}
     </div>
   </div>

@@ -1,6 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { setDoc, getDoc, doc, getFirestore } from "firebase/firestore";
+import {
+  onSnapshot,
+  setDoc,
+  getDoc,
+  doc,
+  getFirestore,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyArlJO4wkwzuNr5B3iPWmBo9OdfmgC6q1c",
@@ -12,7 +18,7 @@ const firebaseConfig = {
   measurementId: "G-FCF131JC51",
 };
 
-export const createUserProfileDoc = async (userAuth) => {
+export const createUserProfileDoc = async (userAuth, ...additonalData) => {
   if (userAuth == null) return;
 
   const docRef = doc(db, "users", userAuth.uid);
@@ -27,11 +33,14 @@ export const createUserProfileDoc = async (userAuth) => {
         displayName,
         email,
         createdAt,
+        ...additonalData,
       });
     } catch (error) {
       console.log(error);
     }
   }
+
+  return docRef;
 };
 
 const app = initializeApp(firebaseConfig);

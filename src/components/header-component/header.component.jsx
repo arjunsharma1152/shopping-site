@@ -10,10 +10,13 @@ import "./header-component.styles.scss";
 
 const Header = ({ currentUser }) => (
   <div className="header">
-    <Link className="logo-comtainer" to="/">
+    <Link className="logo-container" to="/">
       <Logo className="logo" />
     </Link>
     <div className="options">
+      <Link className="option" to="/">
+        HOME
+      </Link>
       <Link className="option" to="/shop">
         SHOP
       </Link>

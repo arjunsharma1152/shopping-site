@@ -18,7 +18,7 @@ const firebaseConfig = {
   measurementId: "G-FCF131JC51",
 };
 
-export const createUserProfileDoc = async (userAuth, ...additonalData) => {
+export const createUserProfileDoc = async (userAuth, additonalData) => {
   if (userAuth == null) return;
 
   const docRef = doc(db, "users", userAuth.uid);

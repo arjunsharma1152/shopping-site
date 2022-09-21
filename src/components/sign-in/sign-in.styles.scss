@@ -6,6 +6,11 @@ $main-color: black;
     display: flex;
     flex-direction: column;
     text-align: center;
+    border: solid 4px black;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left:120px;
+    box-shadow: 10px 10px 5px black;
 }
 
 label{

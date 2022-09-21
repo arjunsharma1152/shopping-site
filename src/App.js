@@ -2,16 +2,16 @@ import React from "react";
 
 import "./App.css";
 
-import Homepage from "./pages/homepage/homepage.component";
+import Homepage from "./pages/homepage/homepage";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { createUserProfileDoc, auth } from "./components/firebase/firebase";
 
-import ShopPage from "./pages/shop/shop.component";
-import SignInOut from "./pages/sign-in-out/sign-in-out.component";
-import Header from "./components/header-component/header.component";
-import { doc, onSnapshot } from "firebase/firestore";
+import ShopPage from "./pages/shop/shop";
+import SignInOut from "./pages/sign-in-out/sign-in-out";
+import Header from "./components/header-component/header";
+import { onSnapshot } from "firebase/firestore";
 
 class App extends React.Component {
   constructor() {

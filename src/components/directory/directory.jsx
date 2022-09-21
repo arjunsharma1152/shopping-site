@@ -1,7 +1,6 @@
 import React from "react";
-import Homepage from "../../pages/homepage/homepage.component";
 import MenuItem from "../menu-item/menu-item.component";
-import './directory.styles.scss';
+import './directory.scss';
 
 class Directory extends React.Component {
     constructor() {

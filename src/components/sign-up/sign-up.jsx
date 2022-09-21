@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./sign-up.styles.scss";
+import "./sign-up.scss";
 
 import CustomButton from "../custom-button/custom-button";
 

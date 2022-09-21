@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./sign-in.styles.scss";
+import "./sign-in.scss";
 import CustomButton from "../custom-button/custom-button";
 import { auth, signInWithGoogle } from "../firebase/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";

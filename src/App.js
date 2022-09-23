@@ -4,10 +4,9 @@ import "./App.css";
 
 import Homepage from "./pages/homepage/homepage";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import { createUserProfileDoc, auth } from "./components/firebase/firebase";
-
 import ShopPage from "./pages/shop/shop";
 import SignInOut from "./pages/sign-in-out/sign-in-out";
 import Header from "./components/header-component/header";
@@ -49,17 +48,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
-        <div>
-          <Header currentUser={this.state.currentUser} />
-          <div className="hr-line"></div>
-          <Routes>
-            <Route exact path="/" element={<Homepage />} />
-            <Route path="/shop" element={<ShopPage />} />
-            <Route path="/signin" element={<SignInOut />} />
-          </Routes>
-        </div>
-      </Router>
+      <div>
+        <Header />
+        <div className="hr-line"></div>
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/signin" element={<SignInOut />} />
+        </Routes>
+      </div>
     );
   }
 }

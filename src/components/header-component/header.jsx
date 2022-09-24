@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-
+import CartIcon from "../cart-icon/cart-icon";
 import { ReactComponent as Logo } from "../../assets/main-logo.svg";
 
 import { auth } from "../firebase/firebase";
@@ -28,13 +28,16 @@ const Header = ({ currentUser }) => (
           <div className="option" onClick={() => auth.signOut()}>
             SIGN OUT
           </div>
-          <div className="option">HI!! {currentUser.displayName}</div>
+          <div className="option">
+            Hey!! {currentUser.displayName.split(" ", 1)}
+          </div>
         </div>
       ) : (
         <Link className="option" to="/signin">
           SIGN IN
         </Link>
       )}
+      <CartIcon />
     </div>
   </div>
 );

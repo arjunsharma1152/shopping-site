@@ -40,7 +40,7 @@ const Header = ({ currentUser }) => (
 );
 
 const mapStateToProps = (state) => ({
-  currenUser: state.user.currenUser,
+  currentUser: state.user.currentUser,
 });
 
 export default connect(mapStateToProps)(Header);

@@ -2,7 +2,9 @@ import React from "react";
 
 import "./collection-item.scss";
 
-const CollectionItem = ({ id, name, imageUrl, price }) => (
+import CustomButton from "../custom-button/custom-button";
+
+const CollectionItem = ({ name, imageUrl, price }) => (
   <div className="collection-item">
     <div
       className="image"
@@ -14,6 +16,7 @@ const CollectionItem = ({ id, name, imageUrl, price }) => (
       <span className="name">{name}</span>
       <span className="price">{price}</span>
     </div>
+    <CustomButton className="custom-button">Add to Cart</CustomButton>
   </div>
 );
 

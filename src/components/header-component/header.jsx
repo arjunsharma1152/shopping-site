@@ -35,7 +35,7 @@ const Header = ({ currentUser, hidden }) => (
           SIGN IN
         </Link>
       )}
-      <CartIcon onClick={() => CartDropdown.addClass("hide")} />
+      <CartIcon/>
     </div>
     {hidden ? null : <CartDropdown />}
   </div>

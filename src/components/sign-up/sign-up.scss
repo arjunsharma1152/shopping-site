@@ -2,17 +2,18 @@ $sub-color: grey;
 $main-color: black;
 
 .sign-up{
-    width: 35vw;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    border: solid 4px black;
+    border: solid 4px white;
     border-radius:20px;
-    padding:20px;
+    padding:20px; 
+    margin-top:20px;   
+    margin-left:50px;
+    margin-right:50px;
     justify-content: center;
     text-align:center;
-    margin: auto;
-    box-shadow: 10px 10px 5px black;
-}
+    box-shadow: 10px 10px 5px rgba(255,255,255,0.2);}
 
 label{
     color: $sub-color;
@@ -25,14 +26,17 @@ label{
   
     .form-input {
       background: none;
-      background-color: white;
+      background-color: $main-color;
       color: $sub-color;
       font-size: 18px;
+      width: 100%;
       border: none;
       border-radius: 0;
       border-bottom: 1px solid $sub-color;
       margin: 10px 0;
-      background: transparent;
+      background: transparent;      
+      display: flex;
+      justify-content: center;
 
     &:focus {
         outline: none;
@@ -45,4 +49,8 @@ input[type='password'] {
   }
 }
 
-
+@media screen and (max-width: 480px) {
+  .sign-up{
+      width: 100%;
+  }
+}

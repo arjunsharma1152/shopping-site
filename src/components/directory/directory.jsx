@@ -11,21 +11,19 @@ class Directory extends React.Component {
         {
           title: "watches",
           imageUrl:
-            "https://i.insider.com/5cbf5a3efa99af28517a2af2?width=1000&format=jpeg&auto=webp",
+            "https://i.pinimg.com/originals/1b/72/95/1b72955f3f21f6932fb4a8bd5db54701.jpg",
           id: 1,
-          linkUrl: "shop/hats",
+          linkUrl: "shop/watches",
         },
         {
           title: "jackets",
-          imageUrl:
-            "https://www.jeanswholesaler.in/2382-large_default/royal-spider-men-s-full-sleeves-denim-jacket-rs-0003.jpg",
+          imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
           id: 2,
           linkUrl: "shop/jackets",
         },
         {
           title: "shoes",
-          imageUrl:
-            "https://5.imimg.com/data5/FP/WV/MY-62197866/jordan-red-black-shoes-500x500.jpg",
+          imageUrl: "https://bit.ly/3RkkTnf",
           id: 3,
           linkUrl: "shop/sneakers",
         },
@@ -38,7 +36,7 @@ class Directory extends React.Component {
         },
         {
           title: "mens",
-          imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+          imageUrl: "https://bit.ly/3rauimz",
           size: "large",
           id: 5,
           linkUrl: "shop/mens",

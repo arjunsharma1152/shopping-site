@@ -12,7 +12,7 @@
     }
   
     .options {
-      width: 50%;
+      width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
@@ -23,11 +23,11 @@
         padding: 10px 15px;
         cursor: pointer;
         margin: 5px;
-        border: solid 1px lightblue;
+        border: solid 1px black;
           border-radius:20px;
         
         &:hover{
-          border: solid 1px black;
+          border: solid 1px white;
           border-radius:20px;
           transition: border 1s;
         }
@@ -39,3 +39,8 @@
       display: flex;
   }
   
+  @media screen and (max-width: 480px) {
+  .option{
+     display: none;
+  }
+}

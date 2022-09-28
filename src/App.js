@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import Homepage from "./pages/homepage/homepage";
 import { setCurrentUser } from "./redux/user/user-action";
 import { Routes, Route } from "react-router-dom";
-
+import Footer from "./components/footer/footer";
 import { createUserProfileDoc, auth } from "./components/firebase/firebase";
 import ShopPage from "./pages/shop/shop";
 import SignInOut from "./pages/sign-in-out/sign-in-out";
@@ -43,11 +43,14 @@ class App extends React.Component {
       <div>
         <Header />
         <div className="hr-line"></div>
-        <Routes>
-          <Route exact path="/" element={<Homepage />} />
-          <Route path="/shop" element={<ShopPage />} />
-          <Route path="/signin" element={<SignInOut />} />
-        </Routes>
+        <div className="main-body">
+          <Routes>
+            <Route exact path="/" element={<Homepage />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/signin" element={<SignInOut />} />
+          </Routes>
+        </div>
+        <Footer className="footer-nav" />
       </div>
     );
   }

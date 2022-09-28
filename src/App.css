@@ -35,3 +35,9 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+@media screen and (max-width: 480px) {
+  .main-body {
+    margin: 0px 0px 100px 0px;
+  }
+}

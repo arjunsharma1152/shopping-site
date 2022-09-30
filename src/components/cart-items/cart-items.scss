@@ -1,4 +1,20 @@
-.item-image{
-    width: 2em;
-    height:50%;
+.dropdown-cart-items{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:5px;
+    color: black;
+    font-weight: bold;
+    
+    img{
+         width: 60px;
+         height: 60px;
+         border: 2px solid black;
+         border-radius:5px;
+         padding:2px;
+    }
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black;
 }

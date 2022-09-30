@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import CustomButton from "../custom-button/custom-button";
 import CartItem from "../cart-items/cart-items";
 import "./cart-dropdown.scss";
@@ -17,7 +18,11 @@ const CartDropdown = ({ cartItems }) => (
         />
       ))}
     </div>
-    <CustomButton>Checkout</CustomButton>
+    <div className="cart-dropdown-button">
+      <Link to="/checkout">
+        <CustomButton>Checkout</CustomButton>
+      </Link>
+    </div>
   </div>
 );
 

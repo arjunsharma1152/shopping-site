@@ -1,11 +1,11 @@
 import React from "react";
 import "./cart-items.scss";
 
-const CartItem = ({name, imageUrl, price}) => (
-    <div>
-        <div className="item-image" style={{backgroundImage: `url(${imageUrl})`}} />
-        {name}  {price}
-    </div>
+const CartItem = ({ id, name, imageUrl, price, quantity }) => (
+  <div className="dropdown-cart-items">
+    <img src={imageUrl} />
+    {name.split(" ")[0]} {name.split(" ")[1]} x {quantity}
+  </div>
 );
 
 export default CartItem;

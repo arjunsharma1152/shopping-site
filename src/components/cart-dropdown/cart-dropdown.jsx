@@ -7,8 +7,14 @@ import "./cart-dropdown.scss";
 const CartDropdown = ({ cartItems }) => (
   <div className="cart-dropdown">
     <div className="cart-items">
-      {cartItems.map(({ name, imageUrl, price }) => (
-        <CartItem name={name} imageUrl={imageUrl} price={price} />
+      {cartItems.map(({ id, name, imageUrl, price, quantity }) => (
+        <CartItem
+          key={id}
+          name={name}
+          imageUrl={imageUrl}
+          price={price}
+          quantity={quantity}
+        />
       ))}
     </div>
     <CustomButton>Checkout</CustomButton>

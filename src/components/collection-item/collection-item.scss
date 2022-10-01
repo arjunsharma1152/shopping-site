@@ -6,14 +6,13 @@
   margin:5px;
   align-items: center;
   position: relative;
-  cursor: pointer;
   border: 4px solid white;
   border-radius: 20px 20px 0px 0px;
   padding:7px 5px 18px 5px;
 
   .image {
-    width: 98%;
-    height: 300px;
+    width: 95%;
+    height: 80%;
     background-size: cover;
     background-position: center;
     margin-bottom: 10px;
@@ -31,25 +30,30 @@
   
   .add-item{
         display: block;
-        width: 150px;
+        width: 80%;
         height: 30px;
         margin-top:30px;
         background-color: grey;
         text-align: center;
         font-weight:bold;
         font-size: 17px;
+        cursor: pointer;
+        
+        &:hover{
+            opacity: 90%;
+        }
     }
 }
 
 @media screen and (max-width:480px){
     
     .collection-item {
-        height: 200px;
-        width: 100px;
-        flex: 1 1 auto;
+        height: 46%;
+        width: 46%;
+        flex: flex-wrap;
         
         .image{
-            width:120px; 
+            width:99%; 
             height: 130px;           
         }
     
@@ -59,8 +63,9 @@
         
         .add-item{
             margin: 0px;
-            width: 100px;
+            width: 95%;
             font-size: 15px;
+            cursor: none;
         }
         
     }

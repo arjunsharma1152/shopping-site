@@ -1,0 +1,21 @@
+.checkout-collection{
+    width: 80%;
+    position: absolute;
+    border: 2px solid white;
+    left: 25%;
+}
+
+.checkout-item{
+    display: flex;
+    align-items: center;
+    
+    img{
+        width:20%;
+        margin:4% 5%;        
+    }
+    
+    p{
+        font-weight: bold;
+        margin: 4% 5%; 
+    }
+}

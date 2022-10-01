@@ -10,6 +10,7 @@ import { createUserProfileDoc, auth } from "./components/firebase/firebase";
 import ShopPage from "./pages/shop/shop";
 import SignInOut from "./pages/sign-in-out/sign-in-out";
 import Header from "./components/header-component/header";
+import CheckOut from "./components/checkout/checkout";
 import { onSnapshot } from "firebase/firestore";
 
 class App extends React.Component {
@@ -48,6 +49,7 @@ class App extends React.Component {
             <Route exact path="/" element={<Homepage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/signin" element={<SignInOut />} />
+            <Route path="/checkout" element={<CheckOut />} />
           </Routes>
         </div>
         <Footer className="footer-nav" />

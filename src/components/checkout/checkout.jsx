@@ -8,14 +8,18 @@ import CartItem from "../cart-items/cart-items";
 
 const CheckOut = ({ cartItems }) => (
   <div className="checkout-collection">
-    {cartItems.map(({ id, name, imageUrl, price, quantity }) => (
-      <div className="checkout-item">
-        <img src={imageUrl} />
-        <p>{name}</p>
-        <p>{price}</p>
-        <p>{quantity}</p>
-      </div>
-    ))}
+    {cartItems.length !== 0 ? (
+      cartItems.map(({ id, name, imageUrl, price, quantity }) => (
+        <div className="checkout-item">
+          <img src={imageUrl} />
+          <p>{name}</p>
+          <p>{price}</p>
+          <p>{quantity}</p>
+        </div>
+      ))
+    ) : (
+      <h1>Cart is Empty</h1>
+    )}
   </div>
 );
 

@@ -1,6 +1,6 @@
 .footer {
     width:100%;
-    background-image: linear-gradient(to bottom, grey, black);    
+    background-image: linear-gradient(to bottom, grey, #36454F);    
     position: fixed;
     bottom: 0px;
     height: 70px;
@@ -14,7 +14,7 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 750px) {
       .footer{
           display: flex;
       }

@@ -4,13 +4,16 @@ import "./checkout.scss";
 
 import { connect } from "react-redux";
 
-import { selectCartItems } from "../../redux/cart/cart-selector";
+import {
+  selectCartItems,
+  selectTotalAmount,
+} from "../../redux/cart/cart-selector";
 
-import { selectTotalAmount } from "../../redux/cart/cart-selector";
+import { removeItemfromCart } from "../../redux/cart/cart-action";
 
 import { createStructuredSelector } from "reselect";
 
-const CheckOut = ({ cartItems, totalAmount }) => (
+const CheckOut = ({ cartItems, totalAmount, removeItem }) => (
   <div className="checkout-collection">
     {cartItems.length !== 0 ? (
       <div className="collection-table">
@@ -20,15 +23,19 @@ const CheckOut = ({ cartItems, totalAmount }) => (
             <td>NAME</td>
             <td>PRICE</td>
             <td>QTY</td>
+            <td>REMOVE</td>
           </tr>
-          {cartItems.map(({ id, name, imageUrl, price, quantity }) => (
+          {cartItems.map((cartItem) => (
             <tr>
               <td>
-                <img src={imageUrl} alt="product" />
+                <img src={cartItem.imageUrl} alt="product" />
               </td>
-              <td className="">{name}</td>
-              <td>{price}</td>
-              <td>{quantity}</td>
+              <td className="">{cartItem.name}</td>
+              <td>{cartItem.price}</td>
+              <td>{cartItem.quantity}</td>
+              <td className="remove" onClick={() => removeItem(cartItem)}>
+                X
+              </td>
             </tr>
           ))}
         </table>
@@ -45,4 +52,8 @@ const mapStateToProps = createStructuredSelector({
   totalAmount: selectTotalAmount,
 });
 
-export default connect(mapStateToProps)(CheckOut);
+const mapDispatchToProps = (dispatch) => ({
+  removeItem: (item) => dispatch(removeItemfromCart(item)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CheckOut);

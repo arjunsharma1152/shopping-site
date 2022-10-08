@@ -22,19 +22,23 @@
                             font-size: 15px;
                         }
                         
-                        .remove{
+                        .remove,.incrementer,.decrementer{
                             cursor: pointer;
+                            font-weight: bold;
+                            border: none;
+                            color: white;
+                            background: transparent;
                         }
                         
                             td{
                                 width: 5%;
-                                padding: 2%;
+                                padding: 1%;
                             
                             
                                     img{
                                         border-radius: 50px;
-                                        width: 70px;
-                                        height: 75px;
+                                        width: 60px;
+                                        height: 65px;
                                     }
                             }
             }

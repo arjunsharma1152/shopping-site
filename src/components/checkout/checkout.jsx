@@ -42,7 +42,7 @@ const CheckOut = ({
                 </td>
                 <td className="">{cartItem.name}</td>
                 <td>{cartItem.price}</td>
-                <td>
+                <td className="quantity">
                   <button
                     className="incrementer"
                     onClick={() => removeItem(cartItem)}

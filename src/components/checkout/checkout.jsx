@@ -28,44 +28,46 @@ const CheckOut = ({
     {cartItems.length !== 0 ? (
       <div className="collection-table">
         <table>
-          <tr className="table-header">
-            <td>ITEM</td>
-            <td>NAME</td>
-            <td>PRICE</td>
-            <td>QTY</td>
-          </tr>
-          {cartItems.map((cartItem) => (
-            <tr id={cartItem.id}>
-              <td>
-                <img src={cartItem.imageUrl} alt="product" />
-              </td>
-              <td className="">{cartItem.name}</td>
-              <td>{cartItem.price}</td>
-              <td>
-                <button
-                  className="incrementer"
-                  onClick={() => removeItem(cartItem)}
-                >
-                  &lt;
-                </button>
-                {cartItem.quantity}
-                <button
-                  className="decrementer"
-                  onClick={() => addItem(cartItem)}
-                >
-                  &gt;
-                </button>
-              </td>
-              <td>
-                <button
-                  className="remove"
-                  onClick={() => clearItemfromCart(cartItem)}
-                >
-                  X
-                </button>
-              </td>
+          <tbody>
+            <tr className="table-header">
+              <td>ITEM</td>
+              <td>NAME</td>
+              <td>PRICE</td>
+              <td>QTY</td>
             </tr>
-          ))}
+            {cartItems.map((cartItem) => (
+              <tr key={cartItem.id}>
+                <td>
+                  <img src={cartItem.imageUrl} alt="product" />
+                </td>
+                <td className="">{cartItem.name}</td>
+                <td>{cartItem.price}</td>
+                <td>
+                  <button
+                    className="incrementer"
+                    onClick={() => removeItem(cartItem)}
+                  >
+                    &lt;
+                  </button>
+                  {cartItem.quantity}
+                  <button
+                    className="decrementer"
+                    onClick={() => addItem(cartItem)}
+                  >
+                    &gt;
+                  </button>
+                </td>
+                <td>
+                  <button
+                    className="remove"
+                    onClick={() => clearItemfromCart(cartItem)}
+                  >
+                    X
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
         <h2>Total Amount : {totalAmount}</h2>
       </div>

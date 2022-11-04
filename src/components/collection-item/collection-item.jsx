@@ -11,7 +11,7 @@ const CollectionItem = ({ item, addItem }) => {
       <img className="image" src={imageUrl} />
       <div className="collection-footer">
         <span className="name">{name}</span>
-        <span className="price">{price}</span>
+        <span className="price">₹ {price}</span>
       </div>
       <button className="add-item" onClick={() => addItem(item)}>
         Add to Cart

@@ -29,7 +29,6 @@
   }
   
   .add-item{
-        display: block;
         width: 80%;
         height: 30px;
         margin-top:30px;
@@ -38,6 +37,7 @@
         font-weight:bold;
         font-size: 17px;
         cursor: pointer;
+        border-radius: 15px;
         
         &:hover{
             opacity: 90%;

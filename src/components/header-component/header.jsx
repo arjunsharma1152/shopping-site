@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import CartIcon from "../cart-icon/cart-icon";
-import { ReactComponent as Logo } from "../../assets/main-logo.svg";
 import CartDropdown from "../cart-dropdown/cart-dropdown";
 import { auth } from "../firebase/firebase";
 import { selectCurrentUser } from "../../redux/user/user-selector";
@@ -12,8 +11,8 @@ import "./header.scss";
 
 const Header = ({ currentUser, hidden }) => (
   <div className="header">
-    <Link className="logo-container" to="/">
-      <Logo className="logo" />
+    <Link className="site-name" to="/">
+      Shopzyy
     </Link>
     <div className="options">
       <Link className="option" to="/">

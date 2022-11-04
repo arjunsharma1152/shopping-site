@@ -8,16 +8,21 @@
     border: 1px solid rgba(255,255,255,0.5);
     margin: 0 7.5px 15px;
     overflow: hidden;
+    
+    .background-image{
+      opacity: 0.75;
+    }
 
     &:hover {
-      cursor: pointer;
-    
+      cursor: auto;          
       & .background-image {
+        opacity: 1;
         transform: scale(1.1);
         transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       }
     
       & .content {
+        cursor: pointer;
         opacity: 0.9;
       }
     }
@@ -43,6 +48,7 @@
 
     }
     .content {
+      width: 100px;
       height: 70px;
       padding: 0px 20px 0px 20px;
       display: flex;

@@ -1,5 +1,5 @@
 import React from "react";
-
+import ParticlesBackground from "./components/particles-background";
 import "./App.css";
 import { connect } from "react-redux";
 import Homepage from "./pages/homepage/homepage";
@@ -12,6 +12,7 @@ import SignInOut from "./pages/sign-in-out/sign-in-out";
 import Header from "./components/header-component/header";
 import CheckOut from "./components/checkout/checkout";
 import { onSnapshot } from "firebase/firestore";
+import CollectionPage from "./pages/collection/collection";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -42,6 +43,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <ParticlesBackground />
         <Header />
         <div className="hr-line"></div>
         <div className="main-body">
@@ -50,6 +52,20 @@ class App extends React.Component {
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/signin" element={<SignInOut />} />
             <Route path="/checkout" element={<CheckOut />} />
+            <Route path="/shop/hats" element={<CollectionPage product="1" />} />
+            <Route
+              path="/shop/sneakers"
+              element={<CollectionPage product="2" />}
+            />
+            <Route
+              path="/shop/jackets"
+              element={<CollectionPage product="3" />}
+            />
+            <Route
+              path="/shop/women"
+              element={<CollectionPage product="4" />}
+            />
+            <Route path="/shop/men" element={<CollectionPage product="5" />} />
           </Routes>
         </div>
         <Footer className="footer-nav" />

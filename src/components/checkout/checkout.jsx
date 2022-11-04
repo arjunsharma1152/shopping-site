@@ -3,7 +3,7 @@ import React from "react";
 import "./checkout.scss";
 
 import { connect } from "react-redux";
-
+import StripeCheckoutButton from "../stripe-button/stripe-button";
 import {
   selectCartItems,
   selectTotalAmount,
@@ -41,7 +41,7 @@ const CheckOut = ({
                   <img src={cartItem.imageUrl} alt="product" />
                 </td>
                 <td className="">{cartItem.name}</td>
-                <td>{cartItem.price}</td>
+                <td>₹ {cartItem.price}</td>
                 <td className="quantity">
                   <button
                     className="incrementer"
@@ -69,7 +69,12 @@ const CheckOut = ({
             ))}
           </tbody>
         </table>
-        <h2>Total Amount : {totalAmount}</h2>
+        <div className="total-amount">
+          <h2>Total Amount : ₹ {totalAmount}</h2>
+          <div className="pay-now">
+            <StripeCheckoutButton price={totalAmount} />
+          </div>
+        </div>
       </div>
     ) : (
       <h1>Cart is Empty</h1>

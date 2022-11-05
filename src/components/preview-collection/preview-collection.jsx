@@ -10,8 +10,8 @@ const CollectionPreview = ({ title, items, routeName }) => {
   console.log(title, items);
   return (
     <div className="collection-preview">
-      <Link className="title" to={`/shop/${routeName}`}>
-        {title.toUpperCase()}&gt;&gt;
+      <Link className="collection-title" to={`/shop/${routeName}`}>
+        {title.toUpperCase()} &gt;&gt;
       </Link>
       <div className="preview">
         {items

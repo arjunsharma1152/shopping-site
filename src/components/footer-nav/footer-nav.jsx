@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import "./footer.scss";
+import "./footer-nav.scss";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase/firebase";
 
-const Footer = ({ currentUser }) => (
+const FooterNav = ({ currentUser }) => (
   <div className="footer">
     <Link className="footer-icon" to="/">
       <Icon
@@ -40,4 +40,4 @@ const mapStateToProps = ({ user: { currentUser } }) => ({
   currentUser,
 });
 
-export default connect(mapStateToProps)(Footer);
+export default connect(mapStateToProps)(FooterNav);

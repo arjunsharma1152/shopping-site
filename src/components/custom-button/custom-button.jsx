@@ -1,14 +1,16 @@
 import React from "react";
-
+import Button from "@mui/material/Button";
 import "./custom-button.scss";
 
 const CustomButton = ({ children, isGoogle, ...otherProps }) => (
-  <button
+  <Button
+    variant="contained"
+    color="secondary"
     className={`${isGoogle ? "google-button" : ""} custom-button`}
     {...otherProps}
   >
     {children}
-  </button>
+  </Button>
 );
 
 export default CustomButton;

@@ -85,25 +85,25 @@ const SHOP_DATA = [
       },
       {
         id: 13,
-        name: "Nike White AirForce",
+        name: "Nike AirForce",
         imageUrl: "https://i.ibb.co/1RcFPk0/white-nike-high-tops.png",
         price: 160,
       },
       {
         id: 14,
-        name: "Nike Red High Tops",
+        name: "Nike High Tops",
         imageUrl: "https://i.ibb.co/QcvzydB/nikes-red.png",
         price: 160,
       },
       {
         id: 15,
-        name: "Nike Brown High Tops",
+        name: "Nike High Tops",
         imageUrl: "https://i.ibb.co/fMTV342/nike-brown.png",
         price: 160,
       },
       {
         id: 16,
-        name: "Air Jordan Limited",
+        name: "Air Jordan",
         imageUrl: "https://i.ibb.co/w4k6Ws9/nike-funky.png",
         price: 190,
       },
@@ -122,19 +122,19 @@ const SHOP_DATA = [
     items: [
       {
         id: 18,
-        name: "Black Jean Shearling",
+        name: "Black Denim",
         imageUrl: "https://i.ibb.co/XzcwL5s/black-shearling.png",
         price: 525,
       },
       {
         id: 19,
-        name: "Blue Jean Jacket",
+        name: "Blue Denim",
         imageUrl: "https://i.ibb.co/mJS6vz0/blue-jean-jacket.png",
         price: 590,
       },
       {
         id: 20,
-        name: "Grey Jean Jacket",
+        name: "Grey Denim",
         imageUrl: "https://i.ibb.co/N71k1ML/grey-jean-jacket.png",
         price: 690,
       },
@@ -189,13 +189,13 @@ const SHOP_DATA = [
       },
       {
         id: 28,
-        name: "Yellow Track Suit",
+        name: "Yellow Tracksuit",
         imageUrl: "https://i.ibb.co/v1cvwNf/yellow-track-suit.png",
         price: 535,
       },
       {
         id: 29,
-        name: "White Blouse",
+        name: "White Crop-top",
         imageUrl: "https://i.ibb.co/qBcrsJg/white-vest.png",
         price: 500,
       },
@@ -208,7 +208,7 @@ const SHOP_DATA = [
     items: [
       {
         id: 30,
-        name: "Camo Down Vest",
+        name: "Half Jacket",
         imageUrl: "https://i.ibb.co/xJS0T3Y/camo-vest.png",
         price: 325,
       },
@@ -220,7 +220,7 @@ const SHOP_DATA = [
       },
       {
         id: 32,
-        name: "Black & White Longsleeve",
+        name: "Full T-shirt",
         imageUrl: "https://i.ibb.co/55z32tw/long-sleeve.png",
         price: 450,
       },
@@ -232,15 +232,15 @@ const SHOP_DATA = [
       },
       {
         id: 34,
-        name: "Jean Long Sleeve",
+        name: "Denim Shirt",
         imageUrl: "https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png",
         price: 400,
       },
       {
         id: 35,
-        name: "Burgundy T-shirt",
+        name: "Printed Shirt",
         imageUrl: "https://i.ibb.co/mh3VM1f/polka-dot-shirt.png",
-        price: 25,
+        price: 250,
       },
     ],
   },

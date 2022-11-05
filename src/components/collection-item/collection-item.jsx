@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { addItem } from "../../redux/cart/cart-action";
 import "./collection-item.scss";
+import Button from "@mui/material/Button";
 
 const CollectionItem = ({ item, addItem }) => {
   const { imageUrl, name, price } = item;
@@ -10,12 +11,17 @@ const CollectionItem = ({ item, addItem }) => {
     <div className="collection-item">
       <img className="image" src={imageUrl} />
       <div className="collection-footer">
-        <span className="name">{name}</span>
-        <span className="price">₹ {price}</span>
+        <div className="name">{name}</div>
+        <div className="price">₹ {price}</div>
       </div>
-      <button className="add-item" onClick={() => addItem(item)}>
+      <Button
+        variant="contained"
+        color="secondary"
+        className="add-item"
+        onClick={() => addItem(item)}
+      >
         Add to Cart
-      </button>
+      </Button>
     </div>
   );
 };

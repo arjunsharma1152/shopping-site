@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import Homepage from "./pages/homepage/homepage";
 import { setCurrentUser } from "./redux/user/user-action";
 import { Routes, Route } from "react-router-dom";
-import Footer from "./components/footer/footer";
+import FooterNav from "./components/footer-nav/footer-nav";
 import { createUserProfileDoc, auth } from "./components/firebase/firebase";
 import ShopPage from "./pages/shop/shop";
 import SignInOut from "./pages/sign-in-out/sign-in-out";
@@ -68,7 +68,8 @@ class App extends React.Component {
             <Route path="/shop/men" element={<CollectionPage product="5" />} />
           </Routes>
         </div>
-        <Footer className="footer-nav" />
+        <FooterNav className="footer-nav" />
+        <div className="copyright">Copyright © 2022 • Arjun Sharma</div>
       </div>
     );
   }

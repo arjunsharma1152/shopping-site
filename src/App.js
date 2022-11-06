@@ -45,7 +45,6 @@ class App extends React.Component {
       <div>
         <ParticlesBackground />
         <Header />
-        <div className="hr-line"></div>
         <div className="main-body">
           <Routes>
             <Route exact path="/" element={<Homepage />} />

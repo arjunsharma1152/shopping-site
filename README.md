@@ -24,10 +24,10 @@ Shopzyy is built with the following technologies:
 #  📷 Snapshots of the Hosted Projects
 
 <div style="display: flex;">
-<img height=250 width=500 src="src/assets/images/page1.png" alt="image"/>
-<img height=250 width=500 src="src/assets/images/page2.png" alt="image"/>
-<img height=250 width=500 src="src/assets/images/page3.png" alt="image"/>
-<img height=250 width=500 src="src/assets/images/page4.png" alt="image"/>
+<img height=250 width=400 src="src/assets/images/page1.png" alt="image"/>
+<img height=250 width=400 src="src/assets/images/page2.png" alt="image"/>
+<img height=250 width=400 src="src/assets/images/page3.png" alt="image"/>
+<img height=250 width=400 src="src/assets/images/page4.png" alt="image"/>
   </div>
 
 ## Starting the Dev Server

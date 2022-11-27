@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+<p align="center">
+<h1 align="center">
+	<a href="[https://](https://shoppingsite.vercel.app/)"><img height=100 src="src/assets/images/shopzyy.png" alt="Shopzyy"/></a>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🗺 About Shopzyy :
+* Shopzyy is a shopping site created with ReactJS & Redux on the frontend.
+* Firebase for back-end (Auth, Firestore Database).
+* Stripe is used for collecting payments.
 
-## Available Scripts
+</p>
+	
+# 🚀 Technologies and Frameworks
 
-In the project directory, you can run:
+Shopzyy is built with the following technologies:
 
-### `npm start`
+- [ReactJS](https://reactjs.org/)
+- [Javascript](https://www.javascript.com)
+- [Firebase](https://firebase.google.com)
+- [Scss](https://sass-lang.com)
+- [Stripe](https://stripe.com)
+- [Particlejs](https://particles.js.org)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#  📷 Snapshots of the Hosted Projects
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<div style="display: flex;">
+<img height=250 width=500 src="src/assets/images/page1.png" alt="image"/>
+<img height=250 width=500 src="src/assets/images/page2.png" alt="image"/>
+<img height=250 width=500 src="src/assets/images/page3.png" alt="image"/>
+<img height=250 width=500 src="src/assets/images/page4.png" alt="image"/>
+  </div>
 
-### `npm test`
+## Starting the Dev Server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Clone the repository to your local system. `https://github.com/arjunsharma1152/shopping-site`
 
-### `npm run build`
+- Firebase API Setup:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  1.  Go to [Firebase Console](https://console.firebase.google.com) and follow the steps to create a new Firebase project.
+  2.  Select `</>` and you will recieve a firebasConfig object with the first paramter as API key. Copy it, which will look something like: 
+  	
+	```js
+              cosnt firebaseConfig = {
+              apiKey: "process.env.REACT_APP_FIREBASE",
+              authDomain: "AUTH_DOMAIN",
+              projectId: "PROJECT_ID",
+              storageBucket: "STORAGE_BUCKET",
+              messagingSenderId: "*************",
+              appId: "******************************",
+              measurementId: "*************"
+            };
+      ```
+   3.  Paste and save it in the firebase.js file. 
+   
+- In the root folder and enter the following commands in the CLI
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+          npm i or yarn
+          npm start or yarn start

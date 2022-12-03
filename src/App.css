@@ -13,9 +13,6 @@ a {
   box-sizing: border-box;
 }
 
-.copyright {
-  text-align: center;
-}
 
 ::-webkit-scrollbar {
   width: 10px;

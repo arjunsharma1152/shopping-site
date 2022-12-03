@@ -68,7 +68,6 @@ class App extends React.Component {
           </Routes>
         </div>
         <FooterNav className="footer-nav" />
-        <div className="copyright">Copyright © 2022 • Arjun Sharma</div>
       </div>
     );
   }

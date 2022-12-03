@@ -12,11 +12,11 @@ const FooterNav = ({ currentUser }) => (
         icon="ant-design:home-filled"
         color="white"
         widht="30"
-        height="30"
+        height="25"
       />
     </Link>
     <Link className="footer-icon" to="/shop">
-      <Icon icon="bxs:shopping-bag" color="white" widht="30" height="30" />
+      <Icon icon="bxs:shopping-bag" color="white" widht="30" height="25" />
     </Link>
     {currentUser ? (
       <Link className="footer-icon" to="/signin">
@@ -24,13 +24,13 @@ const FooterNav = ({ currentUser }) => (
           icon="icomoon-free:exit"
           color="white"
           widht="30"
-          height="26"
+          height="22"
           onClick={() => auth.signOut()}
         />
       </Link>
     ) : (
       <Link className="footer-icon" to="/signin">
-        <Icon icon="bxs:user" color="white" widht="30" height="30" />
+        <Icon icon="bxs:user" color="white" widht="30" height="25" />
       </Link>
     )}
   </div>

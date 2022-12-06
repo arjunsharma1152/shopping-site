@@ -66,6 +66,7 @@ class App extends React.Component {
             />
             <Route path="/shop/men" element={<CollectionPage product="5" />} />
           </Routes>
+          <useAlan />
         </div>
         <FooterNav className="footer-nav" />
       </div>

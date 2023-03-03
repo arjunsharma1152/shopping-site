@@ -8,8 +8,8 @@ const firebaseConfig = {
   projectId: "shopping-site-eb29f",
   storageBucket: "shopping-site-eb29f.appspot.com",
   messagingSenderId: "85485408828",
-  appId: "1:85485408828:web:1842282cf4a307082fa939",
-  measurementId: "G-FCF131JC51",
+  appId: "1:85485408828:web:a09908e76e6f25dd2fa939",
+  measurementId: "G-4SP6DF3X9C",
 };
 
 export const createUserProfileDoc = async (userAuth) => {

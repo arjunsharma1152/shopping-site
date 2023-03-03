@@ -10,17 +10,16 @@
   top: 90px;
   right: 40px;
   z-index: 5;
-  
+
   .cart-items {
     height: 3000px;
     display: flex;
     flex-direction: column;
     overflow: scroll;
-
   }
-  
-  .cart-dropdown-button{
-      text-align: center;
+
+  .cart-dropdown-button {
+    text-align: center;
   }
 
   button {
@@ -28,9 +27,8 @@
   }
 }
 
-
 @media screen and (max-width: 480px) {
   .cart-dropdown {
-      right: 18px;
+    right: 18px;
   }
 }

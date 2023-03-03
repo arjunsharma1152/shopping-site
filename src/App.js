@@ -43,7 +43,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <ParticlesBackground />
+        {/* <ParticlesBackground /> */}
         <Header />
         <div className="main-body">
           <Routes>

@@ -1,6 +1,8 @@
 body {
-  font-family: "El Messiri", sans-serif;
+  background-color: #f5f5f5;
+  font-family: "El Messiri";
 }
+
 a {
   text-decoration: none;
   color: black;

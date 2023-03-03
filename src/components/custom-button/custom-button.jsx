@@ -5,7 +5,6 @@ import "./custom-button.scss";
 const CustomButton = ({ children, isGoogle, ...otherProps }) => (
   <Button
     variant="contained"
-    color="secondary"
     className={`${isGoogle ? "google-button" : ""} custom-button`}
     {...otherProps}
   >

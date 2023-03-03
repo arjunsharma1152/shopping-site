@@ -16,7 +16,6 @@ const CollectionItem = ({ item, addItem }) => {
       </div>
       <Button
         variant="contained"
-        color="secondary"
         className="add-item"
         onClick={() => addItem(item)}
       >

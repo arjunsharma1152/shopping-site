@@ -6,9 +6,9 @@
   margin: 5px;
   align-items: center;
   position: relative;
-  border: 2px solid black;
   border-radius: 20px;
   padding: 7px 5px 18px 5px;
+  background-color: #e8edeb;
 
   .image {
     width: 95%;
@@ -36,9 +36,10 @@
     font-size: 17px;
     cursor: pointer;
     border-radius: 15px;
+    background-color: #04d6d6;
 
     &:hover {
-      opacity: 90%;
+      background-color: #04d6d6;
     }
   }
 }

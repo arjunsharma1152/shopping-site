@@ -5,7 +5,7 @@ const useAlan = () => {
   useEffect(() => {
     alanBtn({
       key: "5d157e1ef3c756b1c9cb1b6edcc680662e956eca572e1d8b807a3e2338fdd0dc/stage",
-      bottom: "55px",
+      bottom: "68px",
       right: "25px",
       zIndex: 10,
       onCommand: (commandData) => {

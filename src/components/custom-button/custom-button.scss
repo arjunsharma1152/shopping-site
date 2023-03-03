@@ -1,30 +1,31 @@
 .custom-button {
-    width: 120px;
-    height: 50px;
-    letter-spacing: 0.5px;
-    line-height: 50px;
-    padding: auto;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-family: 'Open Sans Condensed';
-    font-weight: bolder;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    margin: 20px;
-  
+  width: 120px;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: auto;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed";
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin: 20px;
+  background-color: #04d6d6;
+
+  &:hover {
+    opacity: 0.8;
+    background-color: #039999;
+  }
+
+  &.google-button {
+    background-color: #4885ed;
+    color: white;
+
     &:hover {
-        opacity:0.8;
-    }
-    
-    &.google-button{
-        background-color: #4885ed;
-        color: white;
-        
-        &:hover{
-            border: none;
-            background-color: #3985E4;
-        }
+      border: none;
+      background-color: #3985e4;
     }
   }
-  
+}

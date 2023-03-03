@@ -3,13 +3,13 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { setDoc, getDoc, doc, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyArlJO4wkwzuNr5B3iPWmBo9OdfmgC6q1c",
-  authDomain: "shopping-site-eb29f.firebaseapp.com",
-  projectId: "shopping-site-eb29f",
-  storageBucket: "shopping-site-eb29f.appspot.com",
-  messagingSenderId: "85485408828",
-  appId: "1:85485408828:web:a09908e76e6f25dd2fa939",
-  measurementId: "G-4SP6DF3X9C",
+  apiKey: "AIzaSyDA0H_FN7V_z2Yh8vA2nLT8tT4jOTt_LJk",
+  authDomain: "shopzyy-4fa3b.firebaseapp.com",
+  projectId: "shopzyy-4fa3b",
+  storageBucket: "shopzyy-4fa3b.appspot.com",
+  messagingSenderId: "769649097938",
+  appId: "1:769649097938:web:b4cdad738721c5ef21c10b",
+  measurementId: "G-ZG46PF59YX",
 };
 
 export const createUserProfileDoc = async (userAuth) => {

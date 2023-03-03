@@ -12,6 +12,7 @@ $main-color: black;
   justify-content: center;
   text-align: center;
   box-shadow: 10px 10px 5px grey;
+  background-color: #edf0f0;
 }
 
 label {
@@ -39,7 +40,13 @@ label {
       outline: none;
     }
   }
+  .login-button {
+    background-color: #04d6d6;
 
+    &:hover {
+      background-color: #04d6d6;
+    }
+  }
   input[type="password"] {
     letter-spacing: 0.3em;
   }

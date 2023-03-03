@@ -7,8 +7,8 @@
   background-color: white;
   padding: 10px;
   border: 1px solid black;
-  top: 90px;
-  right: 40px;
+  top: 70px;
+  right: 35px;
   z-index: 5;
 
   .cart-items {
@@ -24,11 +24,18 @@
 
   button {
     margin: auto;
+    background-color: #04d6d6;
+
+    &:hover {
+      background-color: #04d6d6;
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
   .cart-dropdown {
+    height: 520px;
+    width: 90%;
     right: 18px;
   }
 }

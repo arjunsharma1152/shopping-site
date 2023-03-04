@@ -8,6 +8,8 @@ import { auth, createUserProfileDoc } from "../firebase/firebase";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
+import Swal from "sweetalert2";
+
 class SignUp extends React.Component {
   constructor() {
     super();
@@ -26,7 +28,18 @@ class SignUp extends React.Component {
     const { displayName, email, password, confirmPassword } = this.state;
 
     if (password !== confirmPassword) {
-      alert("Passwords don't match");
+      Swal.fire({
+        icon: "warning",
+        title: "Passwords don't match.",
+      });
+      return;
+    }
+
+    if (password.length < 8) {
+      Swal.fire({
+        icon: "warning",
+        title: "Password length must be greater than 8.",
+      });
       return;
     }
 
@@ -37,7 +50,15 @@ class SignUp extends React.Component {
           return userCredential;
         })
         .catch((error) => {
-          console.log(error);
+          if (error.code === "auth/email-already-in-use") {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Email already in use.",
+            });
+          } else {
+            console.log(error);
+          }
         });
 
       await createUserProfileDoc(user);

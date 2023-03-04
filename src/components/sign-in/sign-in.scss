@@ -52,10 +52,12 @@ label {
   }
 
   .google {
-    background-color: #024bf5;
+    background-color: white;
+    color: #04d6d6;
+    font-weight: bold;
 
     &:hover {
-      background-color: #024bf5;
+      background-color: white;
     }
   }
 

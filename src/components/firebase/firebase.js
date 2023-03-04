@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { setDoc, getDoc, doc, getFirestore } from "firebase/firestore";
+import Swal from "sweetalert2";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDA0H_FN7V_z2Yh8vA2nLT8tT4jOTt_LJk",
@@ -32,6 +33,8 @@ export const createUserProfileDoc = async (userAuth) => {
       console.log(error);
     }
   }
+
+  Swal.fire("Successfully Signed In.");
 
   return docRef;
 };

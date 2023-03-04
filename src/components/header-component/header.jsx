@@ -8,6 +8,7 @@ import { selectCurrentUser } from "../../redux/user/user-selector";
 import { selectCartHidden } from "../../redux/cart/cart-selector";
 import { createStructuredSelector } from "reselect";
 import "./header.scss";
+import Swal from "sweetalert2";
 
 const Header = ({ currentUser, hidden }) => (
   <div className="header">
@@ -23,7 +24,13 @@ const Header = ({ currentUser, hidden }) => (
       </Link>
       {currentUser ? (
         <div className="present-user">
-          <div className="option" onClick={() => auth.signOut()}>
+          <div
+            className="option"
+            onClick={() => {
+              auth.signOut();
+              Swal.fire({ text: "Signed Out." });
+            }}
+          >
             SIGN OUT
           </div>
           <div className="option name">Hey!! {currentUser.displayName}</div>

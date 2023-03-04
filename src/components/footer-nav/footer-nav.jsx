@@ -33,7 +33,7 @@ const FooterNav = ({ currentUser }) => (
             height="22"
             onClick={() => {
               auth.signOut();
-              Swal.fire("Signed Out.");
+              Swal.fire({text:"Signed Out."});
             }}
           />
         </Link>

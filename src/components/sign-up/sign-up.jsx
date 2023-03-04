@@ -30,7 +30,7 @@ class SignUp extends React.Component {
     if (password !== confirmPassword) {
       Swal.fire({
         icon: "warning",
-        title: "Passwords don't match.",
+        text: "Passwords don't match.",
       });
       return;
     }
@@ -38,7 +38,7 @@ class SignUp extends React.Component {
     if (password.length < 8) {
       Swal.fire({
         icon: "warning",
-        title: "Password length must be greater than 8.",
+        text: "Password length must be greater than 8.",
       });
       return;
     }

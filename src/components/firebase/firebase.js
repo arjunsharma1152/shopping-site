@@ -34,7 +34,7 @@ export const createUserProfileDoc = async (userAuth) => {
     }
   }
 
-  Swal.fire("Successfully Signed In.");
+  Swal.fire({ text: "Successfully Signed In." });
 
   return docRef;
 };

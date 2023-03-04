@@ -30,7 +30,7 @@ class SignIn extends React.Component {
           if (error.code === "auth/wrong-password") {
             Swal.fire({
               icon: "warning",
-              title: "Incorrect Password.",
+              text: "Incorrect Password.",
             });
           } else {
             console.log(error);

@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase/firebase";
 import CartIcon from "../cart-icon/cart-icon";
+import Swal from "sweetalert2";
 
 const FooterNav = ({ currentUser }) => (
   <div className="footer-root">
@@ -30,7 +31,10 @@ const FooterNav = ({ currentUser }) => (
             color="black"
             widht="30"
             height="22"
-            onClick={() => auth.signOut()}
+            onClick={() => {
+              auth.signOut();
+              Swal.fire("Signed Out.");
+            }}
           />
         </Link>
       ) : (

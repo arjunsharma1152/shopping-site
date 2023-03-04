@@ -4,6 +4,7 @@ import "./sign-in.scss";
 import CustomButton from "../custom-button/custom-button";
 import { auth, signInWithGoogle } from "../firebase/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import Swal from "sweetalert2";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -21,7 +22,20 @@ class SignIn extends React.Component {
     const { email, password } = this.state;
 
     try {
-      signInWithEmailAndPassword(auth, email, password);
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+        })
+        .catch((error) => {
+          if (error.code === "auth/wrong-password") {
+            Swal.fire({
+              icon: "warning",
+              title: "Incorrect Password.",
+            });
+          } else {
+            console.log(error);
+          }
+        });
       this.setState({ email: "", password: "" });
     } catch (error) {
       console.log(error);

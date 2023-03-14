@@ -1,29 +1,40 @@
-import React from "react";
-
-import SHOP_DATA from "./shop.data";
-
+import React, { useState, useEffect } from "react";
 import "./shop.scss";
-
 import CollectionPreview from "../../components/preview-collection/preview-collection";
+import Loader from "react-js-loader";
 
-class ShopPage extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      collections: SHOP_DATA,
+const ShopPage = () => {
+  const [shopData, setShopData] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("https://shopzyy.onrender.com/api/items", {
+        modes: "no-cors",
+      });
+      const alldata = await res.json();
+      console.log(alldata);
+      setShopData(alldata.data.products);
     };
-  }
-
-  render() {
-    return (
-      <div className="shop-page">
-        {this.state.collections.map(({ id, ...otherCollectionProps }) => (
-          <CollectionPreview key={id} {...otherCollectionProps} />
-        ))}
-      </div>
-    );
-  }
-}
+    fetchData();
+  }, []);
+  return (
+    <div className="shop-page">
+      {shopData ? (
+        shopData.map(({ _id, ...otherCollectionProps }) => (
+          <CollectionPreview key={_id} {...otherCollectionProps} />
+        ))
+      ) : (
+        <div className="loader">
+          <Loader
+            type="box-rotate-x"
+            bgColor={"#04d6d6"}
+            title={"LOADING...."}
+            color={"#04d6d6"}
+            size={100}
+          />
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default ShopPage;

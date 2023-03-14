@@ -1,5 +1,5 @@
 import React from "react";
-import ParticlesBackground from "./components/particles-background";
+// import ParticlesBackground from "./components/particles-background";
 import "./App.css";
 import { connect } from "react-redux";
 import Homepage from "./pages/homepage/homepage";

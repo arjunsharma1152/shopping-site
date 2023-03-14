@@ -1,21 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CollectionItem from "../../components/collection-item/collection-item";
 import "./collection.scss";
-import SHOP_DATA from "../shop/shop.data";
+import Loader from "react-js-loader";
 
-const func = (product) => (
-  <div className="collection-items">
-    <div className="title">{SHOP_DATA[product - 1].title.toUpperCase()}</div>
-    <div className="items">
-      {SHOP_DATA[product - 1].items.map((item) => (
-        <CollectionItem item={item} />
-      ))}
+const CollectionPage = (product) => {
+  const [collectionData, setCollectionData] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("https://shopzyy.onrender.com/api/items", {
+        modes: "no-cors",
+      });
+      const alldata = await res.json();
+      console.log(alldata.data.products[product.product - 1].items);
+      setCollectionData(alldata.data.products[product.product - 1]);
+    };
+    fetchData();
+  }, []);
+  return (
+    <div className="collection-page">
+      {collectionData ? (
+        <div className="collection-items">
+          <div className="title">{collectionData.title.toUpperCase()}</div>
+          <div className="items">
+            {collectionData.items.map((item) => (
+              <CollectionItem item={item} />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="loader">
+          <Loader
+            type="box-rotate-x"
+            bgColor={"#04d6d6"}
+            title={"LOADING...."}
+            color={"#04d6d6"}
+            size={100}
+          />
+        </div>
+      )}
     </div>
-  </div>
-);
-
-const CollectionPage = (product) => (
-  <div className="collection-page">{func(product.product)}</div>
-);
+  );
+};
 
 export default CollectionPage;

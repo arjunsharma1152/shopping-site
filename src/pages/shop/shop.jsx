@@ -11,7 +11,6 @@ const ShopPage = () => {
         modes: "no-cors",
       });
       const alldata = await res.json();
-      console.log(alldata);
       setShopData(alldata.data.products);
     };
     fetchData();

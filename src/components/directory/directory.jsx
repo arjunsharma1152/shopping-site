@@ -1,65 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MenuItem from "../menu-item/menu-item";
 import "./directory.scss";
+import Loader from "react-js-loader";
 
-class Directory extends React.Component {
-  constructor() {
-    super();
+const Directory = () => {
+  const [directory, setDirectory] = useState(null);
 
-    this.state = {
-      sections: [
-        {
-          title: "hats",
-          imageUrl:
-            "https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&w=600",
-          id: 1,
-          linkUrl: "shop/hats",
-        },
-        {
-          title: "jackets",
-          imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-          id: 2,
-          linkUrl: "shop/jackets",
-        },
-        {
-          title: "shoes",
-          imageUrl: "https://bit.ly/3RkkTnf",
-          id: 3,
-          linkUrl: "shop/sneakers",
-        },
-        {
-          title: "women",
-          imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-          size: "large",
-          id: 4,
-          linkUrl: "shop/women",
-        },
-        {
-          title: "men",
-          imageUrl: "https://bit.ly/3rauimz",
-          size: "large",
-          id: 5,
-          linkUrl: "shop/men",
-        },
-      ],
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("https://shopzyy.onrender.com/api/directory", {
+        modes: "no-cors",
+      });
+      const alldata = await res.json();
+      setDirectory(alldata.data.directory);
     };
-  }
+    fetchData();
+  }, []);
 
-  render() {
-    return (
-      <div className="directory-menu">
-        {this.state.sections.map(({ title, id, imageUrl, size, linkUrl }) => (
+  return (
+    <div className="directory-menu">
+      {directory ? (
+        directory.map(({ title, _id, imageUrl, size, linkUrl }) => (
           <MenuItem
-            key={id}
+            key={_id}
             title={title}
             imageUrl={imageUrl}
             size={size}
             url={linkUrl}
           />
-        ))}
-      </div>
-    );
-  }
-}
+        ))
+      ) : (
+        <div className="homepage-loader">
+          <Loader
+            type="box-rotate-x"
+            bgColor={"#04d6d6"}
+            title={"LOADING...."}
+            color={"#04d6d6"}
+            size={100}
+          />
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default Directory;

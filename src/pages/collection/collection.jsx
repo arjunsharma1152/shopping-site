@@ -11,7 +11,6 @@ const CollectionPage = (product) => {
         modes: "no-cors",
       });
       const alldata = await res.json();
-      console.log(alldata.data.products[product.product - 1].items);
       setCollectionData(alldata.data.products[product.product - 1]);
     };
     fetchData();

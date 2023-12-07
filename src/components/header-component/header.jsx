@@ -9,9 +9,16 @@ import { selectCartHidden } from "../../redux/cart/cart-selector";
 import { createStructuredSelector } from "reselect";
 import "./header.scss";
 import Swal from "sweetalert2";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
-const Header = ({ currentUser, hidden }) => (
-  <div className="header">
+const Header = ({ currentUser, hidden }) => {
+    useEffect(()=> {
+        Aos.init();
+        },[]);
+  a
+  return(
+  <div className="header" data-aos="fade-down" >
     <Link className="site-name" to="/">
       SHOPZYY
     </Link>
@@ -46,7 +53,7 @@ const Header = ({ currentUser, hidden }) => (
     </div>
     {hidden ? null : <CartDropdown />}
   </div>
-);
+)};
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,

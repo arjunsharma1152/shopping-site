@@ -21,8 +21,8 @@ const CollectionPage = (product) => {
         <div className="collection-items">
           <div className="title">{collectionData.title.toUpperCase()}</div>
           <div className="items">
-            {collectionData.items.map((item) => (
-              <CollectionItem item={item} />
+            {collectionData.items.map((item,idx) => (
+              <CollectionItem item={item} key={idx}/>
             ))}
           </div>
         </div>

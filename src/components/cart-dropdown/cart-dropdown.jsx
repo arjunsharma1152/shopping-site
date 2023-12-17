@@ -11,9 +11,9 @@ import { toggleHidden } from "../../redux/cart/cart-action";
 const CartDropdown = ({ cartItems, dispatch }) => (
   <div className="cart-dropdown">
     <div className="cart-items">
-      {cartItems.map(({ id, name, imageUrl, price, quantity }) => (
+      {cartItems.map(({name, imageUrl, price, quantity },idx) => (
         <CartItem
-          key={id}
+          key={idx}
           name={name}
           imageUrl={imageUrl}
           price={price}

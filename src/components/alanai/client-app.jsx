@@ -1,7 +1,7 @@
 import alanBtn from "@alan-ai/alan-sdk-web";
 import React, { useEffect } from "react";
 
-const useAlan = () => {
+const UseAlan = () => {
   useEffect(() => {
     alanBtn({
       key: "5d157e1ef3c756b1c9cb1b6edcc680662e956eca572e1d8b807a3e2338fdd0dc/stage",
@@ -17,4 +17,4 @@ const useAlan = () => {
   }, []);
 };
 
-export default useAlan;
+export default UseAlan;

@@ -1,13 +1,9 @@
 import React from "react";
-
 import CollectionItem from "../collection-item/collection-item";
-
 import "./preview-collection.scss";
-
 import { Link } from "react-router-dom";
 
-const CollectionPreview = ({ title, items, routeName }) => {
-  return (
+const CollectionPreview = ({ title, items, routeName }) => (
     <div className="collection-preview">
       <Link className="collection-title" to={`/shop/${routeName}`}>
         {routeName.toUpperCase()} &gt;&gt;
@@ -15,12 +11,11 @@ const CollectionPreview = ({ title, items, routeName }) => {
       <div className="preview">
         {items
           .filter((item, idx) => idx < 4)
-          .map((item) => (
-            <CollectionItem key={item.id} item={item} />
+          .map((item,index) => (
+            <CollectionItem key={index} item={item} />
           ))}
       </div>
     </div>
   );
-};
 
 export default CollectionPreview;

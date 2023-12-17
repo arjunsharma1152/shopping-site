@@ -35,8 +35,8 @@ const CheckOut = ({
               <td>PRICE</td>
               <td>QTY</td>
             </tr>
-            {cartItems.map((cartItem) => (
-              <tr key={cartItem.id}>
+            {cartItems.map((cartItem,idx) => (
+              <tr key={idx}>
                 <td>
                   <img src={cartItem.imageUrl} alt="product" />
                 </td>

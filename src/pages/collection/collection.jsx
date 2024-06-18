@@ -7,7 +7,7 @@ const CollectionPage = (product) => {
   const [collectionData, setCollectionData] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("https://shopzyy.onrender.com/api/items", {
+      const res = await fetch("https://shopzyy-api.vercel.app/api/items", {
         modes: "no-cors",
       });
       const alldata = await res.json();
@@ -21,8 +21,8 @@ const CollectionPage = (product) => {
         <div className="collection-items">
           <div className="title">{collectionData.title.toUpperCase()}</div>
           <div className="items">
-            {collectionData.items.map((item,idx) => (
-              <CollectionItem item={item} key={idx}/>
+            {collectionData.items.map((item, idx) => (
+              <CollectionItem item={item} key={idx} />
             ))}
           </div>
         </div>

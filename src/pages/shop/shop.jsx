@@ -7,7 +7,7 @@ const ShopPage = () => {
   const [shopData, setShopData] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("https://shopzyy.onrender.com/api/items", {
+      const res = await fetch("https://shopzyy-api.vercel.app/api/items", {
         modes: "no-cors",
       });
       const alldata = await res.json();

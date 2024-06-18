@@ -13,7 +13,6 @@ import Header from "./components/header-component/header";
 import CheckOut from "./components/checkout/checkout";
 import { onSnapshot } from "firebase/firestore";
 import CollectionPage from "./pages/collection/collection";
-import UseAlan from "./components/alanai/client-app";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -67,7 +66,7 @@ class App extends React.Component {
             />
             <Route path="/shop/men" element={<CollectionPage product="5" />} />
           </Routes>
-          <UseAlan />
+          <useAlan />
         </div>
         <FooterNav className="footer-nav" />
       </div>

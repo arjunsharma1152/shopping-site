@@ -8,7 +8,7 @@ const Directory = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("https://shopzyy.onrender.com/api/directory", {
+      const res = await fetch("https://shopzyy-api.vercel.app/api/directory", {
         modes: "no-cors",
       });
       const alldata = await res.json();

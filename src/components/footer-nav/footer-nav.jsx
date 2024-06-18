@@ -21,7 +21,7 @@ const FooterNav = ({ currentUser }) => (
       <Link className="footer-icon" to="/shop">
         <Icon icon="bxs:shopping-bag" color="black" widht="30" height="25" />
       </Link>
-      <Link className="footer-icon">
+      <Link className="footer-icon" to="/">
         <CartIcon />
       </Link>
       {currentUser ? (
